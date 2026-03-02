@@ -867,6 +867,12 @@ p {
     border: 1px solid var.$color-line;
   }
 
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   &__contact {
     display: flex;
     gap: 12px;
@@ -877,24 +883,31 @@ p {
       padding: 8px 12px;
       font-weight: 700;
       text-transform: uppercase;
-
-      &:first-child {
+    }
+    
+      .distributors__email {
         color: var.$color-accent-text;
         background-color: var.$color-accent;
       }
 
-      &:last-child {
+      .distributors__number {
         color: var.$color-white;
         background-color: var.$color-dark-gray-bg;
         font-weight: 500;
       }
-    }
+
+      .distributors__site {
+        color: var.$color-white;
+        border: 1px solid rgba(var.$color-white, 0.2  ); 
+        font-weight: 500;
+      }
   }
 
   &__locations {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px 24px;
-    flex-direction: column;
+    flex-direction: row;
 
     a {
       text-decoration: none;
@@ -908,7 +921,7 @@ p {
   }
 
   &__content {
-    gap: 32px;
+    gap: 48px;
   }
 
   &__map {

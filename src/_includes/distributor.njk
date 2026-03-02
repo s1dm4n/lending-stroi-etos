@@ -1,0 +1,34 @@
+<section class="distributors grid gutter gt" id="distributor" data-fade-group>
+  <h2 class="font-medium" id="dynamic-title" fade-in>Дистрибьютеры</h2>
+  <div class="distributors__container grid fade-in">
+    <div class="distributors__content cols-8">
+      {% for item in distributor %}
+        <div class="distributors__block">
+          <span class="distributors__name font-title">
+            {{ item.name }}
+          </span>
+          <div class="distributors__information">
+            <div class="distributors__contact">
+              <a class="distributors__email font-main" href="mailto:{{ item.email }}">{{ item.email }}</a>
+              <a class="distributors__number font-main" href="tel:{{ item.number }}">{{ item.number }}</a>
+              <a class="distributors__site font-main" href="http://{% if item['site-address'] %}{{ item['site-address'] }}{% else %}{{ item.site }}{% endif %}" target="_blank">{{ item.site }}</a>
+            </div>
+            <div class="distributors__locations">
+              {% for address in item.addresses %}
+                <a target="_blank" rel="noopener noreferrer" href="https://yandex.ru/maps/?text={{ address | urlencode }}" class="font-main">{{ address }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div id="map" class="distributors__map cols-8"></div>
+    </div>
+    <div aria-hidden="true" class="lines grid fade-in" style="z-index: -2">
+      <div class="cols-4 line"></div>
+      <div class="cols-4 line"></div>
+      <div class="cols-4 line"></div>
+      <div class="cols-4 line"></div>
+      <div class="cols-4 line"></div>
+    </div>
+  </section>

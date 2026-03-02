@@ -520,8 +520,7 @@ p {
   max-width: 100vw;
   border-bottom: 1px solid rgba(255, 255, 255, 0.075);
   background: rgba(35, 38, 42, 0.8);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   transition: color 0.3s ease;
   transition: opacity 0.8s ease;
 }
@@ -662,8 +661,7 @@ p {
   visibility: hidden;
   transform: translateY(-20px);
   background: rgba(35, 38, 42, 0.8);
-  -webkit-backdrop-filter: blur(22.5px);
-          backdrop-filter: blur(22.5px);
+  backdrop-filter: blur(22.5px);
   overflow: hidden auto;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out, transform 0.2s ease-out;
 }
@@ -1127,6 +1125,11 @@ p {
 .distributors__content {
   border: 1px solid rgba(255, 255, 255, 0.075);
 }
+.distributors__block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .distributors__contact {
   display: flex;
   gap: 12px;
@@ -1138,19 +1141,25 @@ p {
   font-weight: 700;
   text-transform: uppercase;
 }
-.distributors__contact a:first-child {
+.distributors__contact .distributors__email {
   color: #4c0000;
   background-color: #e45b5b;
 }
-.distributors__contact a:last-child {
+.distributors__contact .distributors__number {
   color: #ffffff;
   background-color: #4E5054;
   font-weight: 500;
 }
+.distributors__contact .distributors__site {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
 .distributors__locations {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px 24px;
-  flex-direction: column;
+  flex-direction: row;
 }
 .distributors__locations a {
   text-decoration: none;
@@ -1161,7 +1170,7 @@ p {
   gap: 20px;
 }
 .distributors__content {
-  gap: 32px;
+  gap: 48px;
 }
 .distributors__map {
   filter: grayscale(1) !important;
@@ -1525,7 +1534,6 @@ p {
   transform-style: preserve-3d;
   transition: transform 0.6s;
   will-change: transform;
-  /* Анимации при удалении active */
 }
 .modules-style .accordion__collaps-header .arrow-icon::before {
   content: "";
@@ -1558,6 +1566,9 @@ p {
 }
 .modules-style .accordion__collaps-header .arrow-icon.active::after {
   animation: fade-out 0.2s forwards;
+}
+.modules-style .accordion__collaps-header .arrow-icon {
+  /* Анимации при удалении active */
 }
 .modules-style .accordion__collaps-header .arrow-icon:not(.active)::before {
   animation: unfold-out 0.2s forwards;
@@ -1734,13 +1745,15 @@ p {
   text-decoration-thickness: 8%;
   text-underline-offset: 25%;
   transition: color 0.3s;
-  display: inline;
 }
 .news-style .news__content a:hover {
   color: #bf3838;
 }
 .news-style .news__content a:active {
   color: #961e1e;
+}
+.news-style .news__content a {
+  display: inline;
 }
 .news-style .news__content .font-main, .news-style .news__content p {
   margin-bottom: clamp(1.5rem, 1.2426rem + 1.0984vw, 3rem) !important;

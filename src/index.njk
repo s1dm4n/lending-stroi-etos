@@ -2,6 +2,22 @@
 layout: base.njk
 title: Система управления строительством
 description: "Универсальное решение для управления строительными проектами любой сложности: быстрое внедрение, конкурентная стоимость, гибкая настройка"
+distributor:
+  - name: "ООО «ЦСИ «ИНТЕРА»"
+    number: "8 (812) 982-22-17"
+    email: "info@sysintera.ru"
+    site: "sysintera.ru"
+    site-address: "sysintera.ru/etos"
+    addresses:
+        - "г. Санкт-Петербург, Проспект Королева, 7"
+        - "г. Новосибирск, Немировича-Данченко, 165"
+        - "г. Иркутск, ул. Свердлова 40"
+  - name: "ООО ИТЦ «Эксперт»"
+    number: "8 (930) 330-24-37"
+    email: "director@itcexp.ru"
+    site: "itcexp.ru"
+    addresses:
+        - "г. Иваново, ул. Зверева, д.15"
 ---
       <section class="hero grid gutter gb fade-in" id="hero" data-fade-group>
         <div class="hero__content cols-8">
@@ -915,58 +931,4 @@ description: "Универсальное решение для управлен�
           <div class="cols-4 line"></div>
         </div>
       </section>
-      <section
-        class="distributors grid gutter gt"
-        id="distributor"
-        data-fade-group
-      >
-        <h2 class="font-medium" id="dynamic-title" fade-in>Дистрибьютеры</h2>
-        <div class="distributors__container grid fade-in">
-          <div class="distributors__content cols-8">
-            <span class="distributors__name font-title">
-              ООО «ЦСИ «ИНТЕРА»
-            </span>
-            <div class="distributors__information">
-              <div class="distributors__contact">
-                <a
-                  class="distributors__email font-main"
-                  href="mailto:info@sysintera.ru"
-                  >info@sysintera.ru</a
-                >
-                <a
-                  class="distributors__number font-main"
-                  href="tel:+78129822217"
-                  >8 (812) 982-22-17</a
-                >
-              </div>
-              <div class="distributors__locations">
-                <a
-                  class="font-main"
-                  href="https://yandex.ru/maps/-/CHcLvYyV&z=17&mode=search"
-                  >г. Санкт&#8209;Петербург:
-                  пр&#8209;кт&nbsp;Королева,&nbsp;7</a
-                >
-                <a
-                  class="font-main"
-                  href="https://yandex.ru/maps/-/CHcLzSnZ&z=17&mode=search"
-                  >г. Новосибирск:
-                  ул.&nbsp;Немировича&#8209;Данченко,&nbsp;165</a
-                >
-                <a
-                  class="font-main"
-                  href="https://yandex.ru/maps/-/CHcLzP0d&z=17&mode=search"
-                  >г. Иркутск: ул.&nbsp;Свердлова,&nbsp;40</a
-                >
-              </div>
-            </div>
-          </div>
-          <div id="map" class="distributors__map cols-8"></div>
-        </div>
-        <div aria-hidden="true" class="lines grid fade-in" style="z-index: -2">
-          <div class="cols-4 line"></div>
-          <div class="cols-4 line"></div>
-          <div class="cols-4 line"></div>
-          <div class="cols-4 line"></div>
-          <div class="cols-4 line"></div>
-        </div>
-      </section>
+      {% include "distributor.njk" %}
