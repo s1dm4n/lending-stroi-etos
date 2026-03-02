@@ -905,9 +905,13 @@ p {
 
   &__locations {
     display: flex;
-    flex-wrap: wrap;
     gap: 12px 24px;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media (max-width: var.$bp-lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
     a {
       text-decoration: none;

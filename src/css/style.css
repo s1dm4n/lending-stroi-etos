@@ -1157,9 +1157,14 @@ p {
 }
 .distributors__locations {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px 24px;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .distributors__locations {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .distributors__locations a {
   text-decoration: none;
