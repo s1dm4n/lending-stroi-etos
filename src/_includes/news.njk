@@ -5,7 +5,7 @@ pageStyle: news-style
 <section class="hero grid gutter fade-in" id="hero" data-fade-group>
 <div class="hero__content row">
     <nav class="hero__navigation">
-    <a href="/#swiper" class="hero__nav-news nav-font">
+    <a href="#swiper" class="hero__nav-news nav-font">
         <span>
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,11 +69,11 @@ pageStyle: news-style
 <div class="media__content grid row fade-in">
     <div class="media__primery fade-in">
     <picture>
-          <source srcset="/img/{{ image }}.avif 1x, /img/{{ image }}@2x.avif 2x" type="image/avif">
-          <source srcset="/img/{{ image }}.webp 1x, /img/{{ image }}@2x.webp 2x" type="image/webp">
+          <source srcset="img/{{ image }}.avif 1x, img/{{ image }}@2x.avif 2x" type="image/avif">
+          <source srcset="img/{{ image }}.webp 1x, img/{{ image }}@2x.webp 2x" type="image/webp">
           <img 
-            src="/img/{{ image }}.jpg"
-            srcset="/img/{{ image }}.jpg 1x, /img/{{ image }}@2x.jpg 2x"
+            src="img/{{ image }}.jpg"
+            srcset="img/{{ image }}.jpg 1x, img/{{ image }}@2x.jpg 2x"
             alt="{{ imageAlt }}"
             loading="lazy">
     </picture>
@@ -91,7 +91,7 @@ pageStyle: news-style
         </p>
         </div>
         <div class="demo__buttons">
-        <a class="demo__button button" type="button" href="/#distributor">
+        <a class="demo__button button" type="button" href="#distributor">
             <span class="button__text">Посмотреть</span>
             <svg
             xmlns="http://www.w3.org/2000/svg"

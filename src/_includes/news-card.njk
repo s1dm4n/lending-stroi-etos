@@ -3,11 +3,11 @@
     <article class="news-card">
       <div class="news-card__image">
         <picture>
-          <source srcset="/img/{{ post.data.image }}.avif 1x, /img/{{ post.data.image }}@2x.avif 2x" type="image/avif">
-          <source srcset="/img/{{ post.data.image }}.webp 1x, /img/{{ post.data.image }}@2x.webp 2x" type="image/webp">
+          <source srcset="img/{{ post.data.image }}.avif 1x, img/{{ post.data.image }}@2x.avif 2x" type="image/avif">
+          <source srcset="img/{{ post.data.image }}.webp 1x, img/{{ post.data.image }}@2x.webp 2x" type="image/webp">
           <img 
-            src="/img/{{ post.data.image }}.jpg"
-            srcset="/img/{{ post.data.image }}.jpg 1x, /img/{{ post.data.image }}@2x.jpg 2x"
+            src="img/{{ post.data.image }}.jpg"
+            srcset="img/{{ post.data.image }}.jpg 1x, img/{{ post.data.image }}@2x.jpg 2x"
             alt="{{ post.data.title }}"
             loading="lazy">
         </picture>
