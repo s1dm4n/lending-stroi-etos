@@ -26,7 +26,8 @@ jobs:
 
       - name: Build Lite version (без видео)
         run: |
-          npm run build
+          # Собираем с пустым pathPrefix
+          npm run build -- --pathprefix='/'
           # Переименовываем _site для lite версии
           mv _site _site_lite
           
@@ -45,7 +46,7 @@ jobs:
           fi
           
           # Собираем полную версию
-          npm run build
+          npm run build -- --pathprefix='/'
           mv _site _site_full
 
       - name: Create ZIP archives

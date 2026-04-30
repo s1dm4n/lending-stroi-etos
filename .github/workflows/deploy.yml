@@ -23,6 +23,9 @@ jobs:
         with:
           lfs: true  # ДОБАВЛЕНО
 
+      - name: Pull LFS fiwles
+        run: git lfs pull
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -33,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Build with Eleventy
-        run: npm run build
+        run: npm run build -- --pathprefix='/lending-stroi-etos/'
 
       - name: Verify videos are present  # НОВЫЙ ШАГ
         run: |
@@ -50,6 +53,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+          
+      - name: Check generated HTML for correct base paths
+        run: |
+          # Проверяем, что в HTML нет ссылок вида src="/css/" без префикса
+          if grep -r 'src="/css/' _site || grep -r 'href="/css/' _site; then
+            echo "❌ Найдены ссылки на стили без фильтра url!"
+            exit 1
+          fi
+          echo "✅ Все ссылки на ресурсы выглядят корректно"
 
   deploy:
     environment:

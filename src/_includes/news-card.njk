@@ -1,24 +1,33 @@
-<a class="swiper-slide" href="{{ post.url }}">
+{%- set baseName = post.data.image -%}
+
+<a class="swiper-slide" href="{{ post.url | url }}">
   <div class="card">
     <article class="news-card">
       <div class="news-card__image">
         <picture>
-          <source srcset="img/{{ post.data.image }}.avif 1x, img/{{ post.data.image }}@2x.avif 2x" type="image/avif">
-          <source srcset="img/{{ post.data.image }}.webp 1x, img/{{ post.data.image }}@2x.webp 2x" type="image/webp">
+          <source 
+            srcset="{{ ('/img/' + baseName + '.avif') | url }} 1x, {{ ('/img/' + baseName + '@2x.avif') | url }} 2x" 
+            type="image/avif"
+          >
+          <source 
+            srcset="{{ ('/img/' + baseName + '.webp') | url }} 1x, {{ ('/img/' + baseName + '@2x.webp') | url }} 2x" 
+            type="image/webp"
+          >
           <img 
-            src="img/{{ post.data.image }}.jpg"
-            srcset="img/{{ post.data.image }}.jpg 1x, img/{{ post.data.image }}@2x.jpg 2x"
+            src="{{ ('/img/' + baseName + '.jpg') | url }}"
+            srcset="{{ ('/img/' + baseName + '.jpg') | url }} 1x, {{ ('/img/' + baseName + '@2x.jpg') | url }} 2x"
             alt="{{ post.data.title }}"
-            loading="lazy">
+            loading="lazy"
+          >
         </picture>
       </div>
       <div class="news-card__content">
         <time class="news-date font-main">
-            {% if post.date %}
-                {{ post.date | date("dd.MM.yyyy") }}
-            {% else %}
-                Дата не указана
-            {% endif %}
+          {% if post.date %}
+            {{ post.date | date("dd.MM.yyyy") }}
+          {% else %}
+            Дата не указана
+          {% endif %}
         </time>
         <span class="news-title font-title">{{ post.data.title }}</span>
         <p class="news-excerpt font-main">{{ post.data.excerpt }}</p>

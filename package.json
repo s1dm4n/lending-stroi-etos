@@ -5,8 +5,10 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "build:gh": "eleventy --pathprefix='/lending-stroi-etos/'",
+    "build:archive": "eleventy --pathprefix='/'",
+    "serve": "eleventy --serve"
   },
   "repository": {
     "type": "git",
