@@ -76,10 +76,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("slug", (str) => slugify(str));
 
-  eleventyConfig.addGlobalData("basePath", function() {
-      return process.env.PATH_PREFIX || '/';
-  });
-
   // Настройки каталогов и pathPrefix
   return {
       dir: {
