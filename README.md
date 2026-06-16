@@ -1,6 +1,6 @@
 # Лендинг сайта ЭТОС
 
-Лендинг для сайта [stroi.etos-pro.ru](https://stroi.etos-pro.ru), размещённый на [s1dm4n.github.io](https://s1dm4n.github.io). Построен на [Eleventy](https://www.11ty.dev/). Деплой на GitHub Pages и создание ZIP-релиза (`stroi.etos.ru-vX.Y.Z.zip`) происходят при пуше тега (`v*`) через GitHub Actions.
+Лендинг для сайта [stroi.etos-pro.ru](https://stroi.etos-pro.ru), размещённый на [s1dm4n.github.io/lending-stroi-etos](https://s1dm4n.github.io/lending-stroi-etos). Построен на [Eleventy](https://www.11ty.dev/). Деплой на GitHub Pages и создание ZIP-релиза (`stroi.etos.ru-vX.Y.Z.zip`) происходят при пуше тега (`v*`) через GitHub Actions.
 
 ## Что делает проект
 - Генерирует статический сайт с новостями (например, "Невский форум-2025", даты в формате "10 сентября 2025").
