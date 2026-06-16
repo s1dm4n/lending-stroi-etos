@@ -30,7 +30,6 @@ module.exports = function(eleventyConfig) {
     "src/fonts": "fonts",
     "src/img": "img",
     "src/js": "js",
-    "src/modules": "modules",
     "src/vid": "vid"
   });
 
