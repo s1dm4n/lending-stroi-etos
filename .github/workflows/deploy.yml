@@ -36,7 +36,9 @@ jobs:
         run: npm ci
 
       - name: Build with Eleventy
-        run: npm run build -- --pathprefix='/lending-stroi-etos/'
+        run: npx @11ty/eleventy
+        env:
+          PATH_PREFIX: /lending-stroi-etos/
 
       - name: Verify videos are present  # НОВЫЙ ШАГ
         run: |
