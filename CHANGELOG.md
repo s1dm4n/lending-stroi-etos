@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.14](https://github.com/s1dm4n/s1dm4n.github.io/compare/v1.0.13...v1.0.14) (2026-08-18)
+
 ### [1.0.12](https://github.com/s1dm4n/s1dm4n.github.io/compare/v1.0.11...v1.0.12) (2026-03-02)
 
 ### [1.0.11](https://github.com/s1dm4n/s1dm4n.github.io/compare/v1.0.10...v1.0.11) (2026-01-23)
