@@ -21,24 +21,23 @@
     {% include "scripts.njk" %}
     
     {# Главная страница #}
-    {% if page.url == '/' | url %}
+    {% if page.url == '/' %}
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4432c58f527e78f1879787d090c926a51d192243a30f2fbf426e4fb4f3ba15d4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;theme=dark&amp;color=gray&amp;id=map&amp;scroll=true"></script>
         {% include "swiper-scripts.njk" %}
     {% endif %}
 
     {# Страницы новостей (все, где URL содержит /news/) #}
-    {% if ('/news/' | url) in page.url %}
+    {% if '/news/' in page.url %}
         {% include "swiper-scripts.njk" %}
     {% endif %}
 
     {# Страница /modules/id/ #}
-    {% if ('/modules/id/' | url) in page.url %}
+    {% if '/modules/id/' in page.url %}
         <script src="{{ '/js/accordion-nowrap.js' | url }}"></script>
     {% endif %}
 
     {# Страница /modules/sod/ #}
-    {% if ('/modules/sod/' | url) in page.url %}
+    {% if '/modules/sod/' in page.url %}
         <script src="{{ '/js/accordion.js' | url }}"></script>
     {% endif %}
-    </body>
 </html>

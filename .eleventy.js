@@ -1,11 +1,28 @@
 const { DateTime } = require("luxon");
 const slugify = require("@sindresorhus/slugify").default;
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+// Плагин НЕ используем — пишем свой фильтр
+// const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
-  // Плагин для base path (добавляет фильтр | url)
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    // Читаем префикс из переменной окружения (или используем '/')
+  const pathPrefix = process.env.PATH_PREFIX || '/';
 
+  eleventyConfig.addFilter("url", function(path) {
+    // Если префикс корневой — ничего не добавляем
+    if (pathPrefix === '/' || pathPrefix === '') return path;
+    
+    // Убираем завершающий слеш у префикса
+    const cleanPrefix = pathPrefix.replace(/\/$/, '');
+    
+    // Если путь уже начинается с префикса — не дублируем
+    if (path.startsWith(cleanPrefix)) return path;
+    
+    // Добавляем префикс, убирая лишний слеш в начале пути
+    const cleanPath = path.startsWith('/') ? path : '/' + path;
+    return cleanPrefix + cleanPath;
+  });
+
+  // ========== ВСЁ ОСТАЛЬНОЕ БЕЗ ИЗМЕНЕНИЙ ==========
   // Копирование статики
   eleventyConfig.addPassthroughCopy({
     "src/css/style.css": "css/style.css",
@@ -13,7 +30,6 @@ module.exports = function(eleventyConfig) {
     "src/fonts": "fonts",
     "src/img": "img",
     "src/js": "js",
-    "src/modules": "modules",
     "src/vid": "vid"
   });
 
@@ -22,7 +38,6 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/news/*.md");
   });
 
-  // Фильтр для исключения текущей страницы
   eleventyConfig.addFilter("exceptCurrent", function(collection, currentUrl) {
     if (!collection || !Array.isArray(collection)) return [];
     return collection.filter(item => item.url !== currentUrl);
@@ -76,13 +91,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("slug", (str) => slugify(str));
 
-  // Настройки каталогов и pathPrefix
+  // ========== НАСТРОЙКИ КАТАЛОГОВ ==========
   return {
-      dir: {
-          input: "src",
-          includes: "_includes",
-          output: "_site"
-      },
-      pathPrefix: process.env.PATH_PREFIX || '/'   // <-- ЗДЕСЬ, а не внутри dir
+    dir: {
+      input: "src",
+      includes: "_includes",
+      output: "_site"
+    }
+    // pathPrefix НЕ УКАЗЫВАЕМ — используем только переменную окружения
   };
 };

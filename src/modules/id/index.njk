@@ -3,7 +3,6 @@ layout: base.njk
 pageStyle: modules-style
 title: Исполнительная документация
 description: "Программный модуль для управления цифровой исполнительной документацией: создание актов и журналов в формате XML, контроль работ и материалов, взаимодействие с органами ГСН"
-
 ---
             <section class="hero grid gutter gb fade-in" id="hero"
                 data-fade-group>
@@ -63,7 +62,7 @@ description: "Программный модуль для управления ц
                         </div>
                     </div>
                     <a class="button mobile-fullscreen-menu__button adapt-btn"
-                        type="button" href="/#distributor">
+                        type="button" href="{{ '/' | url }}#distributor">
                         <span class="button__text">Заказать презентацию</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25"
                             height="26" viewBox="0 0 25 26" fill="none">
@@ -79,26 +78,26 @@ description: "Программный модуль для управления ц
                         <source
                             media="(min-width: 582px) and (max-width: 1104px)"
                             srcset="
-                        /img/hero-table-modules-id.avif 1x,
-                        /img/hero-table-modules-id@2x.avif 2x
+                        {{ '/img/hero-table-modules-id.avif' | url }} 1x,
+                        {{ '/img/hero-table-modules-id@2x.avif' | url }} 2x
                         " type="image/avif">
                         <source
                             media="(min-width: 582px) and (max-width: 1104px)"
                             srcset="
-                        /img/hero-table-modules-id.webp 1x,
-                        /img/hero-table-modules-id@2x.webp 2x
+                        {{ '/img/hero-table-modules-id.webp' | url }} 1x,
+                        {{ '/img/hero-table-modules-id@2x.webp' | url }} 2x
                         " type="image/webp">
                         <source srcset="
-                        /img/hero-modules-id.avif 1x,
-                        /img/hero-modules-id@2x.avif 2x
+                        {{ '/img/hero-modules-id.avif' | url }} 1x,
+                        {{ '/img/hero-modules-id@2x.avif' | url }} 2x
                         " type="image/avif">
                         <source srcset="
-                        /img/hero-modules-id.webp 1x,
-                        /img/hero-modules-id@2x.webp 2x
+                        {{ '/img/hero-modules-id.webp' | url }} 1x,
+                        {{ '/img/hero-modules-id@2x.webp' | url }} 2x
                         " type="image/webp">
-                        <img src="/img/hero-modules-id.png" srcset="
-                        /img/hero-modules-id.png 1x,
-                        /img/hero-modules-id@2x.png 2x
+                        <img src="{{ '/img/hero-modules-id.png' | url }}" srcset="
+                        {{ '/img/hero-modules-id.png' | url }} 1x,
+                        {{ '/img/hero-modules-id@2x.png' | url }} 2x
                         "
                             alt="Строители анализируют график выполнения работ через модуль исполнительной документации"
                             loading="lazy">
@@ -117,47 +116,47 @@ description: "Программный модуль для управления ц
                     <div class="accordion__slider">
                         <div class="accordion__slides">
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-up-01.avif"
+                                <source srcset="{{ '/img/accordion-id-up-01.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-up-01.webp"
+                                <source srcset="{{ '/img/accordion-id-up-01.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-up-01.jpg"
+                                <img src="{{ '/img/accordion-id-up-01.jpg' | url }}"
                                     alt="Ведение информации о поставках МТР (дата, поставщик и пр.)"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-up-02.avif"
+                                <source srcset="{{ '/img/accordion-id-up-02.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-up-02.webp"
+                                <source srcset="{{ '/img/accordion-id-up-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-up-02.jpg"
+                                <img src="{{ '/img/accordion-id-up-02.jpg' | url }}"
                                     alt="Ведение информации о материалах в поставке"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-up-03.avif"
+                                <source srcset="{{ '/img/accordion-id-up-03.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-up-03.webp"
+                                <source srcset="{{ '/img/accordion-id-up-03.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-up-03.jpg"
+                                <img src="{{ '/img/accordion-id-up-03.jpg' | url }}"
                                     alt="Загрузка документов качества"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-up-04.avif"
+                                <source srcset="{{ '/img/accordion-id-up-04.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-up-04.webp"
+                                <source srcset="{{ '/img/accordion-id-up-04.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-up-04.jpg"
+                                <img src="{{ '/img/accordion-id-up-04.jpg' | url }}"
                                     alt="Контроль соответствия поставленного материала спецификации"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-up-05.avif"
+                                <source srcset="{{ '/img/accordion-id-up-05.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-up-05.webp"
+                                <source srcset="{{ '/img/accordion-id-up-05.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-up-05.jpg"
+                                <img src="{{ '/img/accordion-id-up-05.jpg' | url }}"
                                     alt="Входной контроль материалов (создание актов, ведение журнала)"
                                     loading="lazy">
                             </picture>
@@ -229,56 +228,56 @@ description: "Программный модуль для управления ц
                     <div class="accordion__slider">
                         <div class="accordion__slides">
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-01-02.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-01-02.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-01-02.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-01-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-01-02.jpg"
+                                <img src="{{ '/img/accordion-id-ur-01-02.jpg' | url }}"
                                     alt="Создание графиков (реестров) работ в привязке к элементам объекта"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-01-02.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-01-02.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-01-02.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-01-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-01-02.jpg"
+                                <img src="{{ '/img/accordion-id-ur-01-02.jpg' | url }}"
                                     alt="Ведение информации по работе (код, объем, статус и пр.)"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-03.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-03.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-03.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-03.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-03.jpg"
+                                <img src="{{ '/img/accordion-id-ur-03.jpg' | url }}"
                                     alt="Учет задействованных материалов"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-04.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-04.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-04.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-04.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-04.jpg"
+                                <img src="{{ '/img/accordion-id-ur-04.jpg' | url }}"
                                     alt="Загрузка исполнительных схем и чертежей"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-05.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-05.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-05.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-05.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-05.jpg"
+                                <img src="{{ '/img/accordion-id-ur-05.jpg' | url }}"
                                     alt="Создание актов (АОСР, АООК и др.)"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-ur-06.avif"
+                                <source srcset="{{ '/img/accordion-id-ur-06.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-ur-06.webp"
+                                <source srcset="{{ '/img/accordion-id-ur-06.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-ur-06.jpg"
+                                <img src="{{ '/img/accordion-id-ur-06.jpg' | url }}"
                                     alt="Контроль соответствия выполненной работы ведомости объемов работ"
                                     loading="lazy">
                             </picture>
@@ -365,67 +364,67 @@ description: "Программный модуль для управления ц
                         <div class="accordion__slides">
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-01-02.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-01-02.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-01-02.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-01-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-01-02.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-01-02.jpg' | url }}"
                                     alt="Cоздание ОЖР по форме Минстроя"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-01-02.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-01-02.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-01-02.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-01-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-01-02.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-01-02.jpg' | url }}"
                                     alt="Автоматическое заполнение разделов ОЖР данными из системы"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-03-06.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-03-06.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-03-06.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-03-06.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-03-06.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-03-06.jpg' | url }}"
                                     alt="Подписание ЭП"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-04-05.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-04-05.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-04-05.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-04-05.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-04-05.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-04-05.jpg' | url }}"
                                     alt="Импорт в XML с автопроверкой на ошибки (валидацией)"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-04-05.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-04-05.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-04-05.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-04-05.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-04-05.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-04-05.jpg' | url }}"
                                     alt="Отправка ОЖР в ГСН"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
                                 <source
-                                    srcset="/img/accordion-id-vjr-03-06.avif"
+                                    srcset="{{ '/img/accordion-id-vjr-03-06.avif' | url }}"
                                     type="image/avif">
                                 <source
-                                    srcset="/img/accordion-id-vjr-03-06.webp"
+                                    srcset="{{ '/img/accordion-id-vjr-03-06.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-vjr-03-06.jpg"
+                                <img src="{{ '/img/accordion-id-vjr-03-06.jpg' | url }}"
                                     alt="Загрузка зарегистрированного ОЖР для дальнейшей работы"
                                     loading="lazy">
                             </picture>
@@ -515,29 +514,29 @@ description: "Программный модуль для управления ц
                     <div class="accordion__slider">
                         <div class="accordion__slides">
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-sjr-01.avif"
+                                <source srcset="{{ '/img/accordion-id-sjr-01.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-sjr-01.webp"
+                                <source srcset="{{ '/img/accordion-id-sjr-01.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-sjr-01.jpg"
+                                <img src="{{ '/img/accordion-id-sjr-01.jpg' | url }}"
                                     alt="Cоздание и ведение 12 специальных журналов работ"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-sjr-02.avif"
+                                <source srcset="{{ '/img/accordion-id-sjr-02.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-sjr-02.webp"
+                                <source srcset="{{ '/img/accordion-id-sjr-02.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-sjr-02.jpg"
+                                <img src="{{ '/img/accordion-id-sjr-02.jpg' | url }}"
                                     alt="Автоматическое заполнение разделов спецжурналов данными из системы"
                                     loading="lazy">
                             </picture>
                             <picture class="accordion__slide" data-index="0">
-                                <source srcset="/img/accordion-id-sjr-03.avif"
+                                <source srcset="{{ '/img/accordion-id-sjr-03.avif' | url }}"
                                     type="image/avif">
-                                <source srcset="/img/accordion-id-sjr-03.webp"
+                                <source srcset="{{ '/img/accordion-id-sjr-03.webp' | url }}"
                                     type="image/webp">
-                                <img src="/img/accordion-id-sjr-03.jpg"
+                                <img src="{{ '/img/accordion-id-sjr-03.jpg' | url }}"
                                     alt="Создание печатных форм (СП 70.13330.2012 и др.)"
                                     loading="lazy">
                             </picture>
@@ -1283,9 +1282,9 @@ description: "Программный модуль для управления ц
             <section class="video grid gutter gb fade-in">
                 <video class="row" id="demoVideo" controls playsinline
                     disablePictureInPicture preload="none" width="100%"
-                    poster="/img/video-id.jpg">
-                    <source src="/vid/demo-id.webm" type="video/webm">
-                    <source src="/vid/demo-id.mp4" type="video/mp4">
+                    poster="{{ '/img/video-id.jpg' | url }}">
+                    <source src="{{ '/vid/demo-id.webm' | url }}" type="video/webm">
+                    <source src="{{ '/vid/demo-id.mp4' | url }}" type="video/mp4">
                     Ваш браузер не поддерживает видео.
                 </video>
                 <div aria-hidden="true" class="lines grid" style="z-index:-2">
@@ -1359,7 +1358,7 @@ description: "Программный модуль для управления ц
                                 </div>
                             </div>
                         </div>
-                        <a class="modules__button button" href="/modules/sod"
+                        <a class="modules__button button" href="{{ '/modules/sod/' | url }}"
                             type="button">
                             <span class="button__text">Подробнее</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25"
@@ -1378,9 +1377,9 @@ description: "Программный модуль для управления ц
                             playsinline
                             webkit-playsinline
                             disablePictureInPicture
-                            width="800" poster="/img/sod.jpg"
+                            width="800" poster="{{ '/img/sod.jpg' | url }}"
                             preload="metadata">
-                            <source data-src="/vid/sod.mp4" type="video/mp4">
+                            <source data-src="{{ '/vid/sod.mp4' | url }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                     </div>

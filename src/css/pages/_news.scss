@@ -30,7 +30,11 @@
         }
 
         .font-main, p {
-            margin-bottom: clamp(1.5rem, 1.2426rem + 1.0984vw, 3rem) !important;
+            margin-bottom: clamp(1.125rem, 0.97rem + 0.64vw, 2rem) !important;
+        }
+
+        hr {
+            border-color: #ffffff10 !important;
         }
 
         ul {
@@ -42,8 +46,9 @@
             }
         }
         
-        .font-title {
-            margin-bottom: clamp(0.75rem, 0.6213rem + 0.5492vw, 1.5rem);;
+        .font-title, hr {
+            margin-bottom: clamp(1.125rem, 0.97rem + 0.64vw, 2rem) !important;
+            margin-top: clamp(2rem, 1.70rem + 1.28vw, 3.75rem) !important;
         }
 
         h3 {
